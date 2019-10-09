@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newFuelFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/newFuelDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Date:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/newFuelMileageTextView"
+        app:layout_constraintEnd_toStartOf="@+id/newFuelDateTextInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/newFuelDateTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/newFuelDateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/newFuelBarrier" />
+
+    <TextView
+        android:id="@+id/newFuelMileageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Mileage:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/newFuelVolumeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/newFuelMileageTextInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newFuelDateTextView" />
+
+    <EditText
+        android:id="@+id/newFuelMileageTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/newFuelMileageTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/newFuelBarrier" />
+
+    <TextView
+        android:id="@+id/newFuelVolumeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Volume:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/newFuelPriceTextView"
+        app:layout_constraintEnd_toStartOf="@+id/newFuelVolumeTextInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newFuelMileageTextView" />
+
+    <EditText
+        android:id="@+id/newFuelVolumeTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/newFuelVolumeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/newFuelBarrier" />
+
+    <TextView
+        android:id="@+id/newFuelPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Price:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/newFuelFullTankCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/newFuelPriceTextInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newFuelVolumeTextView" />
+
+    <EditText
+        android:id="@+id/newFuelPriceTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/newFuelPriceTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/newFuelBarrier" />
+
+    <CheckBox
+        android:id="@+id/newFuelFullTankCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Tank"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveFuelButton"
+        app:layout_constraintStart_toEndOf="@id/newFuelBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/newFuelPriceTextView"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/newFuelBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:barrierMargin="8dp"
+        app:constraint_referenced_ids="newFuelDateTextView,newFuelPriceTextView,newFuelMileageTextView,newFuelVolumeTextView" />
+
+    <Button
+        android:id="@+id/saveFuelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Save"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelFuelButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cancelFuelButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cancel"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveFuelButton"
+        app:layout_constraintTop_toTopOf="@+id/saveFuelButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
