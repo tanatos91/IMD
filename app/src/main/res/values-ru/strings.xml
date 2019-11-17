@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">IMD</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Activity -->
+    <string name="fuel_log">История заправок</string>
+    <string name="statistics">Статистика</string>
+    <string name="serviceLog">История обслуживания</string>
+    <string name="settings">Настройки</string>
+
+    <!-- NewRefuelFragment -->
+    <string name="botNav_FuelLog">История заправок</string>
+    <string name="nFuFr_date">Дата:</string>
+    <string name="nFuFr_mileage">Пробег:</string>
+    <string name="nFuFr_volume">Объем, л:</string>
+    <string name="nFuFr_price">Цена 1л:</string>
+    <string name="nFuFr_full_tank">Полный бак</string>
+    <string name="nFuFr_save">Сохранить</string>
+    <string name="nFuFr_cancel">Отмена</string>
+    <string name="nFuFr_enterTheMileage">Введите пробег!</string>
+    <string name="nFuFr_mileageMustBeMore">Пробег должен быть больше предыдущего!</string>
+    <string name="nFuFr_volumeMustBeMore">Объем топлива должен быть больше нуля!</string>
+    <string name="nFuFr_enterFuelPrice">Введите цену топлива!</string>
+    <string name="nFuFr_priceMostBePositive">Цена не может быть отрицательной!</string>
+
+    <!-- RefuelAdapter -->
+    <string name="RefAdap_date">Дата:</string>
+    <string name="RefAdap_mileage">Пробег:</string>
+    <string name="RefAdap_volume">Объем:</string>
+    <string name="RefAdap_fuelPrice">Цена:</string>
+    <string name="RefAdap_km">км</string>
+    <string name="RefAdap_L">л</string>
+    <string name="RefAdap_bynL">Руб/л</string>
+    <string name="RefAdap_byn">Руб</string>
+    <string name="RefAdap_L100km">л / 100 км</string>
+    <string name="RefAdap_fullTank">Полный бак</string>
+
+    <!-- BottomNavigationMenu -->
+    <string name="boNaMenu_fuelLog">Топливо</string>
+    <string name="boNaMenu_serviceLog">Обслуживание</string>
+    <string name="boNaMenu_statistics">Статистика</string>
+    <string name="boNaMenu_settings">Настройки</string>
+
+    <!-- StatisticFragment -->
+    <string name="frStat_average_consumption">Средний расход:</string>
+    <string name="feStat_driving_cost">Стоимость передвижения:</string>
+    <string name="frStat_total">Всего:</string>
+    <string name="frStat_average_mileage_on_one_refuel">Средний пробег на одной заправке:</string>
+    <string name="frStat_total_mileage">Суммарный пробег:</string>
+    <string name="frStat_byn100km">Руб / 100 км</string>
+
+
+
+</resources>

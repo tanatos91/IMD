@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp"
+    android:layout_height="0dp">
+
+    <item
+        android:id="@+id/bb_menu_fuelLog"
+        android:icon="@drawable/fuel_icon"
+        android:title="@string/boNaMenu_fuelLog" />
+
+    <item
+        android:id="@+id/bb_menu_serviceLog"
+        android:icon="@drawable/service_icon"
+        android:title="@string/boNaMenu_serviceLog" />
+
+    <item
+        android:id="@+id/bb_menu_statistics"
+        android:icon="@drawable/statistics_icon"
+        android:title="@string/boNaMenu_statistics" />
+
+    <item
+        android:id="@+id/bb_menu_settings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/boNaMenu_settings" />
+
+</menu>

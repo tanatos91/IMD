@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/newFuelFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:isScrollContainer="true"
     android:orientation="vertical">
 
 
@@ -16,23 +16,23 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Date:"
+        android:text="@string/nFuFr_date"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/newFuelMileageTextView"
-        app:layout_constraintEnd_toStartOf="@+id/newFuelDateTextInput"
+        app:layout_constraintEnd_toStartOf="@+id/newFuelDateShow"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/newFuelDateTextInput"
+    <TextView
+        android:id="@+id/newFuelDateShow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@id/newFuelDateTextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chooseDateButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/newFuelBarrier" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Mileage:"
+        android:text="@string/nFuFr_mileage"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/newFuelVolumeTextView"
         app:layout_constraintEnd_toStartOf="@+id/newFuelMileageTextInput"
@@ -68,7 +68,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Volume:"
+        android:text="@string/nFuFr_volume"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/newFuelPriceTextView"
         app:layout_constraintEnd_toStartOf="@+id/newFuelVolumeTextInput"
@@ -94,7 +94,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Price:"
+        android:text="@string/nFuFr_price"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/newFuelFullTankCheckBox"
         app:layout_constraintEnd_toStartOf="@+id/newFuelPriceTextInput"
@@ -117,12 +117,13 @@
         android:id="@+id/newFuelFullTankCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Full Tank"
+        android:checked="true"
+        android:text="@string/nFuFr_full_tank"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/saveFuelButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/newFuelBarrier"
-        app:layout_constraintTop_toBottomOf="@+id/newFuelPriceTextView"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:layout_constraintTop_toBottomOf="@+id/newFuelPriceTextView" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/newFuelBarrier"
@@ -139,7 +140,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:text="Save"
+        android:text="@string/nFuFr_save"
         android:textColor="#000000"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -153,13 +154,26 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Cancel"
+        android:text="@string/nFuFr_cancel"
         android:textColor="#000000"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/saveFuelButton"
         app:layout_constraintTop_toTopOf="@+id/saveFuelButton" />
+
+    <ImageButton
+        android:id="@+id/chooseDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/newFuelDateShow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newFuelDateShow"
+        app:layout_constraintTop_toTopOf="@+id/newFuelDateShow"
+        app:srcCompat="@android:drawable/ic_menu_today" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

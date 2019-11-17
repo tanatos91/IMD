@@ -4,6 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://maven.google.com' }
         
     }
     dependencies {
@@ -13,6 +14,9 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+ext {
+    roomVersion = '2.1.0-alpha03'
+}
 
 allprojects {
     repositories {
@@ -21,6 +25,7 @@ allprojects {
         
     }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

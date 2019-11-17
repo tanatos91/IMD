@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/totalDivider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginEnd="12dp"
+        android:background="#797979"
+        app:layout_constraintBottom_toTopOf="@id/avTankMileageHeaderTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/avDrivingCostTextView"
+        app:layout_constraintTop_toBottomOf="@+id/avDrivingCostTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/avConsumptionHeaderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/frStat_average_consumption"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/avDrivingCostHeaderTextView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/avDrivingCostHeaderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/feStat_driving_cost"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@id/avConsumptionHeaderTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/avConsumptionHeaderTextView" />
+
+    <TextView
+        android:id="@+id/avConsumptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/totalDivider"
+        app:layout_constraintEnd_toEndOf="@+id/avConsumptionHeaderTextView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/avConsumptionHeaderTextView"
+        app:layout_constraintTop_toBottomOf="@+id/avConsumptionHeaderTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/avDrivingCostTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="--"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/avDrivingCostHeaderTextView"
+        app:layout_constraintTop_toBottomOf="@+id/avDrivingCostHeaderTextView" />
+
+    <View
+        android:id="@+id/totalDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="#797979"
+
+        app:layout_constraintBottom_toTopOf="@id/avTankMileageHeaderTextView"
+        app:layout_constraintEnd_toEndOf="@+id/avConsumptionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avConsumptionTextView" />
+
+
+    <TextView
+        android:id="@+id/avTankMileageHeaderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/frStat_average_mileage_on_one_refuel"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/avTankMileageTextView"
+        app:layout_constraintEnd_toEndOf="@+id/avConsumptionTextView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalDivider" />
+
+    <TextView
+        android:id="@+id/totalMileageHeaderTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/frStat_total_mileage"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/avDrivingCostTextView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/avDrivingCostTextView"
+        app:layout_constraintTop_toBottomOf="@+id/totalDivider2" />
+
+    <TextView
+        android:id="@+id/avTankMileageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="--"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/avTankMileageHeaderTextView"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avTankMileageHeaderTextView" />
+
+    <TextView
+        android:id="@+id/totalMileageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="--"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/totalMileageHeaderTextView"
+        app:layout_constraintTop_toBottomOf="@+id/totalMileageHeaderTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

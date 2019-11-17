@@ -3,4 +3,54 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Activity -->
+    <string name="fuel_log">Fuel log</string>
+    <string name="statistics">Statistics</string>
+    <string name="serviceLog">Service log</string>
+    <string name="settings">Settings</string>
+
+    <!-- NewRefuelFragment -->
+    <string name="botNav_FuelLog">Fuel log</string>
+    <string name="nFuFr_date">Date:</string>
+    <string name="nFuFr_mileage">Mileage:</string>
+    <string name="nFuFr_volume">Volume:</string>
+    <string name="nFuFr_price">Price:</string>
+    <string name="nFuFr_full_tank">Full Tank</string>
+    <string name="nFuFr_save">Save</string>
+    <string name="nFuFr_cancel">Cancel</string>
+    <string name="nFuFr_enterTheMileage">Enter the mileage!</string>
+    <string name="nFuFr_mileageMustBeMore">The mileage must be more than previous!</string>
+    <string name="nFuFr_volumeMustBeMore">The volume must be more than 0!</string>
+    <string name="nFuFr_enterFuelPrice">Enter the fuel price!</string>
+    <string name="nFuFr_priceMostBePositive">The fuel price must be positive!</string>
+
+    <!-- RefuelAdapter -->
+    <string name="RefAdap_date">Date:</string>
+    <string name="RefAdap_mileage">Mileage:</string>
+    <string name="RefAdap_volume">Volume:</string>
+    <string name="RefAdap_fuelPrice">Fuel price:</string>
+    <string name="RefAdap_km">km</string>
+    <string name="RefAdap_L">L</string>
+    <string name="RefAdap_bynL">BYN/L</string>
+    <string name="RefAdap_byn">BYN</string>
+    <string name="RefAdap_L100km">L / 100Km</string>
+    <string name="RefAdap_fullTank">Full tank</string>
+
+    <!-- BottomNavigationMenu -->
+    <string name="boNaMenu_fuelLog">Fuel log</string>
+    <string name="boNaMenu_serviceLog">Service log</string>
+    <string name="boNaMenu_statistics">Statistics</string>
+    <string name="boNaMenu_settings">Settings</string>
+
+    <!-- StatisticFragment -->
+    <string name="frStat_average_consumption">Average consumption</string>
+    <string name="feStat_driving_cost">Driving cost</string>
+    <string name="frStat_total">Total:</string>
+    <string name="frStat_average_mileage_on_one_refuel">Average mileage on one refuel</string>
+    <string name="frStat_total_mileage">Total mileage</string>
+    <string name="frStat_byn100km">BYN / 100 km</string>
+
+
+
 </resources>

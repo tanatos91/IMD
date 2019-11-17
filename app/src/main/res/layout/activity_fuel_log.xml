@@ -4,59 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:screenOrientation="portrait"
     android:background="#ffffffff"
-    tools:context=".FuelLogActivity">
+    android:screenOrientation="portrait"
+    tools:context=".View.FuelLogActivity">
 
     <TextView
-        android:id="@+id/fuelLogActivityTextView"
+        android:id="@+id/activityHeaderTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:padding="4dp"
         android:background="#ffffffff"
-        android:text="Fuel log"
+        android:gravity="top"
+        android:padding="4dp"
+
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/fuelLogRecyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/logListFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fuelLogRecyclerView"
+    <FrameLayout
+        android:id="@+id/logListFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/cardview_light_background"
-        app:layout_constraintBottom_toTopOf="@+id/newFuelFragment"
+
+        app:layout_constraintBottom_toTopOf="@+id/insertNewElementFrameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fuelLogActivityTextView"
+        app:layout_constraintTop_toBottomOf="@+id/activityHeaderTextView"
 
         />
 
     <FrameLayout
-        android:id="@+id/newFuelFragment"
-        android:name="com.example.imd.Fragments.NewFuelFragment"
+        android:id="@+id/insertNewElementFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fuelLogRecyclerView"
-        tools:layout="@layout/fragment_new_fuel"
-        />
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf="@+id/logListFrameLayout" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/newFuelActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        app:backgroundTint="#FFFFFF"
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/new_fuel_icon" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@layout/bottom_navigation_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
