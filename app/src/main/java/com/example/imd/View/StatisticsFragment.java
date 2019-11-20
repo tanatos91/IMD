@@ -8,17 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.example.imd.R;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import adapter.Refuel;
-import adapter.RefuelListSource;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
 
 
 public class StatisticsFragment extends Fragment {
@@ -67,16 +64,22 @@ public class StatisticsFragment extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void setStatisticFrom(ArrayList<Refuel> refuelList) {
-        totalMileage = refuelList.get(refuelList.size() - 1).getRefuelMileage() - refuelList.get(0).getRefuelMileage();
+        totalMileage = 0;
         totalMoney = 0;
         totalFuel = 0;
+        if (refuelList.size() > 0) {
+            totalMileage = refuelList.get(refuelList.size() - 1).getRefuelMileage() - refuelList.get(0).getRefuelMileage();
+        }
         refuelList.forEach(refuel -> {
             totalMoney += refuel.getRefuelVolume() * refuel.getRefuelFuelPrice();
             totalFuel += refuel.getRefuelVolume();
         });
         avConsumption = totalFuel / totalMileage * 100;
         drivingCost = totalMoney / totalMileage * 100;
-        oneRefuelMileage = totalMileage / refuelList.size() - 1;
+        oneRefuelMileage = 0;
+        if (refuelList.size() > 0) {
+            oneRefuelMileage = totalMileage / refuelList.size() - 1;
+        }
 
 
     }

@@ -1,7 +1,6 @@
 package adapter;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
 public class StatRefuel extends Refuel {
     private int incMileage = 0;
@@ -42,10 +41,11 @@ public class StatRefuel extends Refuel {
 
     public static ArrayList<StatRefuel> makeStatRefuelArrayListFrom(ArrayList<Refuel> refuelArrayList) {
         ArrayList<StatRefuel> statRefuelArrayList = new ArrayList<>();
-        statRefuelArrayList.add(new StatRefuel(refuelArrayList.get(0)));
-        for (int i = 1; i < refuelArrayList.size(); i++)
-            statRefuelArrayList.add(new StatRefuel(refuelArrayList.get(i), statRefuelArrayList.get(i - 1)));
-
+        if (refuelArrayList.size() > 0) {
+            statRefuelArrayList.add(new StatRefuel(refuelArrayList.get(0)));
+            for (int i = 1; i < refuelArrayList.size(); i++)
+                statRefuelArrayList.add(new StatRefuel(refuelArrayList.get(i), statRefuelArrayList.get(i - 1)));
+        }
         return statRefuelArrayList;
     }
 
