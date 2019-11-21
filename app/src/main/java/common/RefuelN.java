@@ -8,32 +8,26 @@ import androidx.room.PrimaryKey;
 public class RefuelN {
 
     @PrimaryKey
-    @ColumnInfo(name = "refuel_date")
     private long refuel_date;
-
-    @ColumnInfo(name = "vehicle_id")
-    private int vehicle_id;
-
-    @ColumnInfo(name = "fuel_type")
-    private int fuel_type;
-
-    @ColumnInfo(name = "refuel_volume")
-    private double refuel_volume;
-
-    @ColumnInfo(name = "refuel_mileage")
     private int refuel_mileage;
-
-    @ColumnInfo(name = "refuel_fuel_price")
+    private int vehicle_id;
+    private int fuel_type;
+    private double refuel_volume;
     private double refuel_fuel_price;
-
-    @ColumnInfo(name = "refuel_full_tank_flag")
     private boolean full_tank_flag;
 
     public static final boolean FULL_TANK = true;
     public static final boolean NOT_FULL_TANK = false;
 
 
-    public RefuelN(long refuelDate, int fuelType, int vehicleID, int refuelMileage, double refuelVolume, double refuelFuelPrice, boolean fullTankFlag) {
+    public RefuelN(
+            long refuelDate,
+            int fuelType,
+            int vehicleID,
+            int refuelMileage,
+            double refuelVolume,
+            double refuelFuelPrice,
+            boolean fullTankFlag) {
         setRefuel_date(refuelDate);
         setRefuel_mileage(refuelMileage);
         setRefuel_volume(refuelVolume);
@@ -42,9 +36,6 @@ public class RefuelN {
         setVehicle_id(vehicleID);
         setFuel_type(fuelType);
     }
-
-
-
 
 
     private void setFull_tank_flag(boolean full_tank_flag) {

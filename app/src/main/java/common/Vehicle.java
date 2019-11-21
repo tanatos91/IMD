@@ -1,6 +1,11 @@
 package common;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Vehicle {
+    @PrimaryKey
     private int vehicle_id;
     private String vehicle_name = "";
     private String vehicle_vin = "";
