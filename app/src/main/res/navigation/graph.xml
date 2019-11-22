@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph"
+    app:startDestination="@id/FeedFragment">
+
+    <fragment
+        android:id="@+id/FeedFragment"
+        android:name="by.ewoks.powervehicle.feed.FeedFragment"
+        tools:layout="@layout/fragment_feed">
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddRefuelFragment"
+        android:name="by.ewoks.powervehicle.refuel.AddRefuelFragment"
+        tools:layout="@layout/fragment_add_refuel">
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddServiceFragment"
+        android:name="by.ewoks.powervehicle.services.AddServiceFragment"
+        tools:layout="@layout/fragment_add_service">
+    </fragment>
+
+    <fragment
+        android:id="@+id/StatisticsFragment"
+        android:name="by.ewoks.powervehicle.statistics.StatisticsFragment"
+        tools:layout="@layout/fragment_stats">
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="by.ewoks.powervehicle.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+    </fragment>
+
+
+</navigation>
