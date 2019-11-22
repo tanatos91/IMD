@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Refuel(
+data class Vehicle(
         @PrimaryKey val id: Long,
         val name: String,
         val vin: String,
