@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.imd">
+    package="by.ewoks.powervehicle">
 
     <application
+        android:name="PowerVehicleApp"
         android:allowBackup="true"
         android:icon="@drawable/imd_logo"
         android:label="@string/app_name"
@@ -10,7 +11,8 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.FuelLogActivity"
+        <activity
+            android:name="com.example.imd.View.FuelLogActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

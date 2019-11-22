@@ -8,14 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.imd.R;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import adapter.Refuel;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import by.ewoks.powervehicle.R;
 
 
 public class StatisticsFragment extends Fragment {
@@ -33,12 +32,12 @@ public class StatisticsFragment extends Fragment {
     private DecimalFormat df = new DecimalFormat("#.##");
     private Context myContext;
 
-    public static StatisticsFragment getInstance(Object o) {
-        return new StatisticsFragment();
-    }
-
     private StatisticsFragment() {
         // Required empty public constructor
+    }
+
+    public static StatisticsFragment getInstance(Object o) {
+        return new StatisticsFragment();
     }
 
     @Override
@@ -90,6 +89,7 @@ public class StatisticsFragment extends Fragment {
         this.avConsumptionTextView.setText(df.format(avConsumption) + " " + myContext.getResources().getString(R.string.RefAdap_L100km));
         this.oneRefuelMileageTextView.setText(df.format(oneRefuelMileage) + " " + myContext.getResources().getString(R.string.RefAdap_km));
     }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -97,7 +97,6 @@ public class StatisticsFragment extends Fragment {
         this.myContext = context;
 
     }
-
 
 
 }

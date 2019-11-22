@@ -8,12 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.imd.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.DecimalFormat;
@@ -23,6 +17,11 @@ import java.util.List;
 
 import adapter.Refuel;
 import adapter.StatRefuel;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+import by.ewoks.powervehicle.R;
 
 public class RefuelAdapter extends RecyclerView.Adapter<RefuelAdapter.ViewHolder> {
     private final Resources resources;

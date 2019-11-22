@@ -3,9 +3,6 @@ package com.example.imd.View;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,12 +14,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.imd.R;
-
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
 import adapter.Refuel;
+import androidx.fragment.app.Fragment;
+import by.ewoks.powervehicle.R;
 
 import static android.widget.Toast.LENGTH_SHORT;
 

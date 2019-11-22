@@ -1,11 +1,5 @@
 package com.example.imd.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
-
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
@@ -16,8 +10,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.example.imd.MainImd;
-import com.example.imd.R;
-
 import com.example.imd.Presenter.ImdPresenter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,16 +17,21 @@ import java.util.ArrayList;
 
 import adapter.Refuel;
 import adapter.RefuelListSource;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+import by.ewoks.powervehicle.R;
 
 
 public class FuelLogActivity extends AppCompatActivity implements NewFuelFragment.OnFragmentInteractionListener, MainImd.View, RefuelListSource {
 
     private static final String TAG = "ImdView";
+    BottomNavigationView bottomNavigationView;
     private NewFuelFragment newFuelFragment;
     private FuelLogFragment fuelLogFragment;
     private StatisticsFragment statisticsFragment;
     private TextView headerText;
-    BottomNavigationView bottomNavigationView;
     private int state = 0;
 
     private ImdPresenter mPresenter;
@@ -64,6 +61,16 @@ public class FuelLogActivity extends AppCompatActivity implements NewFuelFragmen
 
     };
 
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -81,7 +88,6 @@ public class FuelLogActivity extends AppCompatActivity implements NewFuelFragmen
         this.mPresenter = new ImdPresenter(this);
         mPresenter.makeStartView();
     }
-
 
     @Override
     public void onFragmentInteraction(View v) {
@@ -116,7 +122,6 @@ public class FuelLogActivity extends AppCompatActivity implements NewFuelFragmen
 
     }
 
-
     @Override
     public void setFuelLog(ArrayList<Refuel> refuelArrayList) {
         fuelLogFragment.updateFuelLog(refuelArrayList);
@@ -138,7 +143,6 @@ public class FuelLogActivity extends AppCompatActivity implements NewFuelFragmen
         nfTrans.commit();
         newFuelFragment.setDefaultValues();
     }
-
 
     @Override
     public void removeNewFuelDialog() {
@@ -214,7 +218,6 @@ public class FuelLogActivity extends AppCompatActivity implements NewFuelFragmen
 
     }
 
-
     @Override
     public void goToSettings() {
         if (getState() != MainImd.SETTINGS) {
@@ -233,21 +236,9 @@ public class FuelLogActivity extends AppCompatActivity implements NewFuelFragmen
         return fuelLogFragment.getLastRefuel();
     }
 
-
     @Override
     public ArrayList<Refuel> getFuelLogArrayList() {
         return mPresenter.getFuelLogArrayList();
-    }
-
-    public static void hideKeyboard(Activity activity) {
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        //Find the currently focused view, so we can grab the correct window token from it.
-        View view = activity.getCurrentFocus();
-        //If no view currently has focus, create a new one, just so we can grab a window token from it
-        if (view == null) {
-            view = new View(activity);
-        }
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     public int getState() {
