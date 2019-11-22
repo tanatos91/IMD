@@ -38,7 +38,7 @@ public class RefuelAdapter extends RecyclerView.Adapter<RefuelAdapter.ViewHolder
         setRefuelList(refuelList);
         resources = context.getApplicationContext().getResources();
 
-        // this.refuelList.sort(Comparator.comparing(Refuel::getRefuelMileage).reversed());
+        // this.refuelList.sort(Comparator.comparing(Refuel2::getRefuel_mileage).reversed());
     }
 
     public void setRefuelList(ArrayList<Refuel> refuelList) {
