@@ -1,3 +1,4 @@
+/*
 package common;
 
 import androidx.room.Entity;
@@ -166,3 +167,4 @@ public class Vehicle {
         this.antifreeze_change_reglament = antifreeze_change_reglament;
     }
 }
+*/

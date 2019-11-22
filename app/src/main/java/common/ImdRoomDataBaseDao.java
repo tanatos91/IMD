@@ -1,3 +1,4 @@
+/*
 package common;
 
 import androidx.room.Dao;
@@ -25,7 +26,8 @@ public interface ImdRoomDataBaseDao {
 
     //удаление авто потом будет с удалением его заправок и сервисов
 
-  /*  // Добавление Refuel2 в бд
+  */
+/*  // Добавление Refuel2 в бд
     @Insert
     void insert(Refuel refuel);
 
@@ -39,5 +41,7 @@ public interface ImdRoomDataBaseDao {
 
     // Получение всех Refuel2 из бд с условием
     @Query("SELECT * FROM Refuel WHERE refuel_full_tank_flag LIKE :fullFlag")
-    List<Refuel> getAllRefuelWithFullTankFlag(boolean fullFlag); */
+    List<Refuel> getAllRefuelWithFullTankFlag(boolean fullFlag); *//*
+
 }
+*/

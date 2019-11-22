@@ -1,3 +1,4 @@
+/*
 package common;
 
 import androidx.room.Entity;
@@ -89,3 +90,4 @@ public class VehicleService {
         this.service_cost = service_cost;
     }
 }
+*/

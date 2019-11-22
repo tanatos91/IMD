@@ -1,3 +1,4 @@
+/*
 package common;
 
 import androidx.room.ColumnInfo;
@@ -98,3 +99,4 @@ public class RefuelN {
 }
 
 
+*/

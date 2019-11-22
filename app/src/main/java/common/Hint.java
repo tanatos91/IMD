@@ -1,3 +1,4 @@
+/*
 package common;
 
 import androidx.room.Entity;
@@ -52,3 +53,4 @@ public class Hint {
         this.hint_url = hint_url;
     }
 }
+*/
