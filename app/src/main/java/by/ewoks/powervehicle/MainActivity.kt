@@ -2,13 +2,10 @@ package by.ewoks.powervehicle
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import by.ewoks.powervehicle.feed.FeedFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -16,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
 
-//    private val mainViewModel: MainViewModel by lazy { ViewModelProviders.of(this).get(MainViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
