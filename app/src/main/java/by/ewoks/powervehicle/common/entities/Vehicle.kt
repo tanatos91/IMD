@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 @Entity
 data class Vehicle(
         @PrimaryKey val id: Long,
-        val name: String,
-        val vin: String,
+        @ColumnInfo(name = "name") val name: String,
+        @ColumnInfo(name = "vin") val vin: String,
         @ColumnInfo(name = "oil_reglament") val oilReglament: Int,
         @ColumnInfo(name = "brake_fluid_reglament_months") val brakeFluidReglamentMonths: Int,
         @ColumnInfo(name = "fuel_filter_reglament_km") val fuelFilterReglamentKm: Int,
