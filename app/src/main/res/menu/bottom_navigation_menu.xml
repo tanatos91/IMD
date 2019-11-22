@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/AddRefuelFragment"
+        android:icon="@drawable/fuel_icon"
+        android:title="@string/boNaMenu_fuelLog" />
+
+    <item
+        android:id="@+id/AddServiceFragment"
+        android:icon="@drawable/service_icon"
+        android:title="@string/boNaMenu_serviceLog" />
+
+    <item
+        android:id="@+id/StatisticsFragment"
+        android:icon="@drawable/statistics_icon"
+        android:title="@string/boNaMenu_statistics" />
+
+    <item
+        android:id="@+id/SettingsFragment"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/boNaMenu_settings" />
+
+</menu>
